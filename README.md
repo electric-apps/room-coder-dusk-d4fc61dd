@@ -1,43 +1,36 @@
-# Kyle's Stack
+# Todo App
 
-A starter for building apps with TanStack Start, Radix UI, and capsize typography — with [`@tanstack/intent`](https://github.com/TanStack/intent) skills pre-installed for **Electric**, **TanStack DB**, and **Durable Streams**.
+A reactive, real-time todo application built with Electric SQL + TanStack DB. Tasks sync instantly across all connected clients via Postgres — no polling, no manual refreshes.
 
-## Quick Start
+## Screenshot
+
+![Todo App screenshot placeholder]
+
+## Features
+
+- Add todos with title, priority (low/medium/high), and optional due date
+- Complete/uncomplete tasks with optimistic updates
+- Delete individual tasks or clear all completed at once
+- Filter by All / Active / Completed
+- Real-time sync across browser tabs and clients via Electric SQL
+
+## Tech Stack
+
+- **Electric SQL** — Postgres-to-client real-time sync via shapes
+- **TanStack DB** — reactive collections and optimistic mutations
+- **Drizzle ORM** — schema definitions and migrations
+- **TanStack Start** — React meta-framework with SSR
+- **Radix UI Themes** — accessible, composable UI components
+
+## Running Locally
 
 ```bash
-npx gitpick KyleAMathews/kpb my-app
-cd my-app
 pnpm install
-pnpm dev
+pnpm drizzle-kit generate && pnpm drizzle-kit migrate
+pnpm dev:start
 ```
 
-## Included Skills
-
-This starter comes with skills pre-installed. Just ask your coding agent:
-
-**Electric** — Sync Postgres to your app
-- "Set up Electric sync for my Postgres database"
-- "Run the Electric security checklist"
-
-**TanStack DB** — Reactive client-side data
-- "Add a TanStack DB collection for the users table"
-- "Set up live queries for my todos"
-
-**Durable Streams** — Real-time state sync
-- "Set up a Durable Streams dev environment"
-- "Add presence tracking to my app"
-
-**Radix + Capsize** — Typography
-- "Switch to the Playfair theme"
-- "Show me more font theme options"
-
-## What's Included
-
-- **TanStack Start** - Full-stack React framework
-- **Radix UI** - Accessible components with themes
-- **Capsize typography** - Pixel-perfect text rendering
-- **Dozens of font pairings included** - Ask the agent to set one up
-- **Biome** - Fast linting and formatting
+App runs at `http://localhost:8080`.
 
 ## License
 
